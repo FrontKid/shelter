@@ -1,0 +1,87 @@
+//---------------------------------------------
+//------- styles when page is loading... ------
+//---------------------------------------------
+
+body._loading {
+  overflow-y: hidden;
+}
+
+.mod {
+  background: rgb(73, 56, 44);
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.spinner {
+  width: rem(250);
+  height: rem(250);
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.spinner {
+  color: $red;
+  animation: color-bubble 2s linear 0s infinite;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px;
+    animation: spinner-bubble 1.3s linear 0s infinite;
+    margin: auto;
+    width: rem(110);
+    height: rem(110);
+    opacity: 0;
+  }
+  &:before {
+    animation: spinner-bubble 1.3s linear 2s infinite;
+  }
+}
+
+@keyframes spinner-bubble {
+  from {
+    width: rem(10);
+    height: rem(10);
+    opacity: 0.8;
+  }
+  to {
+    width: rem(250);
+    height: rem(250);
+    opacity: 0;
+  }
+}
+
+@keyframes color-bubble {
+  0% {
+    color: $blue;
+  }
+  33% {
+    color: $green;
+  }
+  66% {
+    color: $light-red;
+  }
+  100% {
+    color: $yellow;
+  }
+}
+
+.mod._close {
+  display: none;
+}

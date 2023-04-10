@@ -1,0 +1,25 @@
+//layout circle
+.circle {
+  width: rem(52);
+  height: rem(52);
+  border: 2px solid $primary;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    border: 2px solid $primary-light;
+    background-color: $primary-light;
+  }
+
+  &:active {
+    border-color: $primary;
+    background-color: $primary;
+  }
+}

@@ -1,0 +1,19 @@
+//general layout button
+.button {
+  font-family: "Georgia";
+  letter-spacing: rem(0.9);
+  font-size: rem(17);
+  line-height: rem(22.1);
+  font-weight: 400;
+  padding: rem(15) rem(45);
+  border-radius: rem(100);
+  color: $grey-d;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+  &:hover {
+    background-color: $primary-light;
+  }
+  &:active {
+    background-color: $primary;
+  }
+}

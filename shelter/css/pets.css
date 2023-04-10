@@ -1,0 +1,162 @@
+.header__pets-nav-burger {
+  right: 0.7333333333rem;
+  bottom: 0.2rem;
+}
+.header__pets-nav-burger span {
+  border-color: #000000;
+}
+.header__pets-nav-burger::after, .header__pets-nav-burger::before {
+  background-color: #000000;
+}
+
+.our-friends {
+  background-color: #f6f6f6;
+  padding: 5.3333333333rem 0 6.6666666667rem 0;
+  min-height: 100vh;
+}
+
+.our-friends__title {
+  margin-bottom: 3.9333333333rem;
+  transform: translate(0, -100%);
+  transition: transform 0.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s, background-color 0.3s ease 0s;
+  opacity: 0;
+}
+
+.our-friends__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 2rem 2.6666666667rem;
+  padding-left: 0;
+}
+
+.our-friends-circle-box {
+  text-align: center;
+  margin-top: 4.1333333333rem;
+  transform: translate(0, 100%);
+  transition: transform 0.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s, background-color 0.3s ease 0s;
+  opacity: 0;
+}
+
+.our-friends-circle-item {
+  display: inline-block;
+  position: relative;
+  background: transparent;
+}
+.our-friends-circle-item:disabled {
+  background-color: transparent;
+  border-color: #cdcdcd;
+  cursor: default;
+}
+.our-friends-circle-item:disabled svg path {
+  fill: #cdcdcd;
+}
+.our-friends-circle-item:first-child {
+  margin-right: 1.0666666667rem;
+}
+.our-friends-circle-item:last-child {
+  margin-left: 1.0666666667rem;
+}
+.our-friends-circle-item span {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5333333333rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.our-friends-circle-item--left {
+  transform: rotate(-180deg);
+}
+
+.our-friends-circle-item--number {
+  background-color: #f1cdb3;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: default;
+}
+.our-friends-circle-item--number:hover {
+  background-color: #f1cdb3;
+  border: none;
+}
+
+.footer__pets {
+  padding-top: 2.6666666667rem;
+}
+
+.our-friends-circle-box._active,
+.our-friends__title._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+@media (max-width: 1280px) {
+  .dog-card {
+    justify-self: center;
+  }
+}
+@media (max-width: 769px) {
+  .our-friends__title {
+    margin-bottom: 1.8666666667rem;
+  }
+  .our-friends__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 580px;
+    grid-row-gap: 32px;
+  }
+  .dog-card:nth-child(7),
+  .dog-card:nth-child(8) {
+    display: none;
+  }
+  .our-friends {
+    padding-bottom: 5.0666666667rem;
+    padding-top: 5.5333333333rem;
+  }
+  .our-friends-circle-box {
+    margin-top: 2.6rem;
+  }
+  .footer__pets {
+    padding-top: 2.0666666667rem;
+  }
+}
+@media (max-width: 640px) {
+  .dog-card:nth-child(4),
+  .dog-card:nth-child(5),
+  .dog-card:nth-child(6) {
+    display: none;
+  }
+}
+@media (max-width: 640px) and (max-width: 377px) {
+  .our-friends {
+    padding-top: 41px;
+    padding-bottom: 41px;
+  }
+  .our-friends__title {
+    max-width: initial;
+    margin-bottom: 2.7333333333rem;
+  }
+  .our-friends-circle-box {
+    margin-top: 2.8rem;
+  }
+  .our-friends-circle-item--number {
+    margin-left: 7px;
+    margin-right: 5px;
+  }
+  .our-friends-circle-item--left {
+    margin-left: 0;
+  }
+  .our-friends-circle-item:last-child {
+    margin-left: 5px;
+  }
+  .our-friends-circle-item:first-child {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 769px) {
+  .header__pets {
+    padding-bottom: 1.8666666667rem;
+  }
+}

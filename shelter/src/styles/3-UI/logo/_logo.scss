@@ -1,0 +1,43 @@
+//layout logotype
+.logo {
+  font-family: "Georgia";
+  font-size: rem(32);
+  line-height: rem(29);
+  letter-spacing: 0.06em;
+  color: $primary;
+  min-width: rem(195);
+  transition: opacity 0.3s ease 0s;
+  &:hover {
+    opacity: 0.85;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+
+.logo__title {
+  display: block;
+  font-weight: 400;
+}
+
+.logo__desc {
+  padding-left: rem(3.9);
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: rem(13);
+  line-height: rem(14.95);
+  color: $white;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: block;
+  }
+}
+
+@media (max-width: 377px) {
+  .logo {
+    margin-left: rem(9);
+  }
+}

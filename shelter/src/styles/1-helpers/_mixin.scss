@@ -1,0 +1,18 @@
+//for different color of button background
+@mixin btnBackground($color, $border) {
+  background-color: $color;
+  border: $border;
+}
+
+//hide animated item for future animation
+@mixin animationDown($x, $y, $delay) {
+  transform: translate($x, $y);
+  transition: transform 0.8s ease-in-out $delay, opacity 0.8s ease-in-out $delay, background-color 0.3s ease 0s;
+  opacity: 0;
+}
+
+//show animation effect
+@mixin animationUp($x, $y) {
+  transform: translate($x, $y);
+  opacity: 1;
+}

@@ -1,0 +1,207 @@
+@import "../1-helpers/variables";
+@import "../1-helpers/_functions.scss";
+@import "../1-helpers/mixin";
+
+//------------------------------------------------
+//---------  OUR-FRIENDS PART START --------------
+//------------------------------------------------
+
+.header__pets-nav-burger {
+  right: rem(11);
+  bottom: rem(3);
+
+  span {
+    border-color: $black;
+  }
+
+  &::after,
+  &::before {
+    background-color: $black;
+  }
+}
+
+.our-friends {
+  background-color: $white-dark;
+  padding: rem(80) 0 rem(100) 0;
+  min-height: 100vh;
+}
+
+.our-friends__title {
+  margin-bottom: rem(59);
+
+  //animation item
+  @include animationDown(0, -100%, 0s);
+}
+
+.our-friends__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: rem(30) rem(40);
+  padding-left: 0;
+}
+
+.our-friends-circle-box {
+  text-align: center;
+  margin-top: rem(62);
+
+  //animation item
+  @include animationDown(0, 100%, 0s);
+}
+
+.our-friends-circle-item {
+  display: inline-block;
+  position: relative;
+  background: transparent;
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $grey-light;
+    cursor: default;
+
+    svg path {
+      fill: $grey-light;
+    }
+  }
+
+  &:first-child {
+    margin-right: rem(16);
+  }
+
+  &:last-child {
+    margin-left: rem(16);
+  }
+
+  span {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: rem(21);
+    line-height: rem(23);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+  }
+}
+.our-friends-circle-item--left {
+  transform: rotate(-180deg);
+}
+
+.our-friends-circle-item--number {
+  background-color: $primary;
+  margin-right: rem(15);
+  margin-left: rem(15);
+  cursor: default;
+
+  &:hover {
+    background-color: $primary;
+    border: none;
+  }
+}
+
+//------------------------------------------------
+//---------  OUR-FRIENDS PART END ----------------
+//------------------------------------------------
+
+//------------------------------------------------
+//------------  FOOTER PART START ----------------
+//------------------------------------------------
+
+.footer__pets {
+  padding-top: rem(40);
+}
+
+//------------------------------------------------
+//------------  FOOTER PART END ------------------
+//------------------------------------------------
+
+//------------------------------------------------
+//-----------  ANIMATION PART START --------------
+//------------------------------------------------
+
+.our-friends-circle-box._active,
+.our-friends__title._active {
+  @include animationUp(0, 0);
+}
+
+//------------------------------------------------
+//-----------  ANIMATION PART END ----------------
+//------------------------------------------------
+
+@media (max-width: 1280px) {
+  .dog-card {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 769px) {
+  .our-friends__title {
+    margin-bottom: rem(28);
+  }
+
+  .our-friends__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 580px;
+    grid-row-gap: 32px;
+  }
+
+  .dog-card:nth-child(7),
+  .dog-card:nth-child(8) {
+    display: none;
+  }
+  .our-friends {
+    padding-bottom: rem(76);
+    padding-top: rem(83);
+  }
+
+  .our-friends-circle-box {
+    margin-top: rem(39);
+  }
+
+  .footer__pets {
+    padding-top: rem(31);
+  }
+}
+
+@media (max-width: 640px) {
+  .dog-card:nth-child(4),
+  .dog-card:nth-child(5),
+  .dog-card:nth-child(6) {
+    display: none;
+  }
+
+  @media (max-width: 377px) {
+    .our-friends {
+      padding-top: 41px;
+      padding-bottom: 41px;
+    }
+    .our-friends__title {
+      max-width: initial;
+      margin-bottom: rem(41);
+    }
+
+    .our-friends-circle-box {
+      margin-top: rem(42);
+    }
+
+    .our-friends-circle-item--number {
+      margin-left: 7px;
+      margin-right: 5px;
+    }
+    .our-friends-circle-item--left {
+      margin-left: 0;
+    }
+
+    .our-friends-circle-item:last-child {
+      margin-left: 5px;
+    }
+    .our-friends-circle-item:first-child {
+      margin-right: 5px;
+    }
+  }
+}
+@media (max-width: 769px) {
+  .header__pets {
+    padding-bottom: rem(28);
+  }
+}
